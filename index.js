@@ -16,5 +16,5 @@ app.use((err, req, res, next) => {
       message: err.message,
     });
 });
-
+res.end('Zeet Node')
 app.listen(hostName, port,() => console.log(`Server is running at http://${hostName}:${port}/` ));
