@@ -2,6 +2,9 @@ const express = require('express');
 const routes = require('./routes');
 const app = express();
 
+const hostName = '0.0.0.0'
+const port  = 5000
+
 app.use(express.json());
 app.use(routes);
 // Handling Errors
@@ -14,4 +17,4 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(5000,() => console.log('Server is running on port 5000'));
+app.listen(hostName, port,() => console.log(`Server is running at http://${hostName}:${port}/` ));
