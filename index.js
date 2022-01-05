@@ -2,7 +2,7 @@ const express = require('express');
 const routes = require('./routes');
 const app = express();
 
-const hostName = '0.0.0.0'
+// const hostName = '0.0.0.0'
 const port  = 5000
 
 app.use(express.json());
@@ -16,5 +16,5 @@ app.use((err, req, res, next) => {
       message: err.message,
     });
 });
-res.end('Zeet Node')
-app.listen(hostName, port,() => console.log(`Server is running at http://${hostName}:${port}/` ));
+// res.end('Zeet Node')
+app.listen(port,() => console.log(`Server is running at http://localhost:${port}` ));
